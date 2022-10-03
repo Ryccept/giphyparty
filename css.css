@@ -15,11 +15,6 @@ h1 {
   text-align: center;
 }
 
-#gifCollection {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 #deleteBtn {
   font-size: 0.65em;
   background-color: rgb(231, 119, 119);

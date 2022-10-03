@@ -3,14 +3,6 @@ const $btn = $("#submitbtn");
 const $div = $("#gifCollection");
 const $deleteBtn = $("#deleteBtn");
 
-//it all works but occasionally I recieve this error: Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'images')
-//     at recieveGif (app.js:16:34)
-//     at async HTMLButtonElement.<anonymous> (app.js:42:18)
-// recieveGif @ app.js:16
-// await in recieveGif (async)
-// dispatch @ jquery-3.2.1.js:5206
-// elemData.handle @ jquery-3.2.1.js:5014
-
 //Gets the gif URL from the Giphy API
 async function recieveGif(input) {
   const gifIndex = getGifIndex();
@@ -27,7 +19,7 @@ async function recieveGif(input) {
 
 //This is what allows for a random gif to be selected if you use the same search term
 function getGifIndex() {
-  const gifIndex = Math.floor(Math.random() * 10) + 1;
+  const gifIndex = Math.floor(Math.random() * 10);
   return gifIndex;
 }
 
